@@ -1,0 +1,22 @@
+.titulo-grande {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.titulo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.35;
+  font-size: 2rem;
+}
+
+.texto-medio {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.texto-medio-p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3rem;
+}
