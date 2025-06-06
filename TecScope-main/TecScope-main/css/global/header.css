@@ -1,0 +1,36 @@
+.header-bg {
+  background-color: var(--c2);
+  padding: 16px 0;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .menu {
+  gap: 4px;
+}
+
+.header .buscar {
+  gap: 4px;
+  background: linear-gradient(55deg, var(--c2), var(--c1));
+  border-radius: 8px;
+  padding: 8px 20px;
+  transition: all 300ms ease;
+}
+
+.header .buscar:hover {
+  box-shadow: -3px 3px 0px 0 var(--c1);
+  transform: translate(2px, -2px);
+}
+
+.header h1 {
+  max-width: fit-content;
+}
+
+.header a {
+  max-width: fit-content;
+}

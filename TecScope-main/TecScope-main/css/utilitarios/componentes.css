@@ -1,0 +1,32 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.item {
+  border: 1px solid var(--c3);
+}
+
+.img-grid-item {
+  border-radius: 8px;
+}
+
+.seta {
+  height: 28px;
+  width: 28px;
+}
+
+.img-grid-item {
+  border: none;
+}
