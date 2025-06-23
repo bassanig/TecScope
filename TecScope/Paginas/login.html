@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login + Cadastro Simples</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primaria-clara': '#7d3dfd',
+            'primaria-escura': '#3a0ca3',
+            'secundaria-escura': '#505050',
+            'branco': '#fafafa',
+            'preto': '#050505',
+          },
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            roboto: ['Roboto', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body class="bg-secundaria-escura flex items-center justify-center h-screen font-poppins">
+
+  <div class="bg-branco p-8 rounded-2xl shadow-lg w-80">
+    <h1 id="formTitle" class="text-2xl font-bold mb-6 text-center text-primaria-escura">Login</h1>
+
+    <form id="authForm" class="flex flex-col gap-4">
+      <input
+        type="text"
+        id="username"
+        placeholder="Usuário"
+        class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primaria-clara"
+        required
+      />
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Senha"
+        class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primaria-clara"
+        required
+      />
+
+      <button
+        type="submit"
+        class="bg-primaria-clara text-white py-2 rounded hover:bg-primaria-escura transition"
+      >
+        Entrar
+      </button>
+    </form>
+
+    <p id="message" class="mt-4 text-center text-red-600 font-semibold"></p>
+
+    <p class="mt-4 text-center text-secundaria-escura">
+      <span id="toggleText">Não tem conta?</span>
+      <button id="toggleBtn" class="text-primaria-escura font-semibold hover:underline ml-1">
+        Cadastre-se
+      </button>
+    </p>
+  </div>
+
+  <script>
+    const authForm = document.getElementById('authForm');
+    const message = document.getElementById('message');
+    const toggleBtn = document.getElementById('toggleBtn');
+    const toggleText = document.getElementById('toggleText');
+    const formTitle = document.getElementById('formTitle');
+
+    let isLogin = true;
+
+    toggleBtn.addEventListener('click', () => {
+      isLogin = !isLogin;
+      if (isLogin) {
+        formTitle.textContent = 'Login';
+        authForm.querySelector('button').textContent = 'Entrar';
+        toggleText.textContent = 'Não tem conta?';
+        toggleBtn.textContent = 'Cadastre-se';
+        message.textContent = '';
+      } else {
+        formTitle.textContent = 'Cadastro';
+        authForm.querySelector('button').textContent = 'Cadastrar';
+        toggleText.textContent = 'Já tem conta?';
+        toggleBtn.textContent = 'Login';
+        message.textContent = '';
+      }
+    });
+
+    authForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (username === '' || password === '') {
+        message.style.color = 'red';
+        message.textContent = 'Preencha todos os campos.';
+        return;
+      }
+
+      const users = JSON.parse(localStorage.getItem('users')) || {};
+
+      if (isLogin) {
+        if (users[username] && users[username] === password) {
+          message.style.color = 'green';
+          message.textContent = 'Login realizado com sucesso!';
+        } else {
+          message.style.color = 'red';
+          message.textContent = 'Usuário ou senha incorretos.';
+        }
+      } else {
+        if (users[username]) {
+          message.style.color = 'red';
+          message.textContent = 'Usuário já existe. Escolha outro.';
+        } else {
+          users[username] = password;
+          localStorage.setItem('users', JSON.stringify(users));
+          message.style.color = 'green';
+          message.textContent = 'Cadastro realizado com sucesso! Agora faça login.';
+          isLogin = true;
+          formTitle.textContent = 'Login';
+          authForm.querySelector('button').textContent = 'Entrar';
+          toggleText.textContent = 'Não tem conta?';
+          toggleBtn.textContent = 'Cadastre-se';
+          authForm.reset();
+        }
+      }
+    });
+  </script>
+</body>
+</html>

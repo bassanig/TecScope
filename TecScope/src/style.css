@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --color-p1: #7d3dfd; /* Roxo claro */
+  --color-p2: #3a0ca3; /* Roxo escuro */
+  --color-p4: #505050; /* Cinza escuro */
+}
+
+@theme {
+  --color-primaria-clara: #7d3dfd;
+  --color-primaria-escura: #3a0ca3;
+  --color-secundaria-escura: #505050;
+  --color-preto: #050505;
+  --color-branco: #fafafa;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+}
+
+
+.container {
+  width: 100%;
+  /* sm */
+  @media (width >= 640px) {
+    max-width: 40rem;
+  }
+  /* md */
+  @media (width >= 768px) {
+    max-width: 48rem;
+  }
+  /* lg */
+  @media (width >= 1024px) {
+    max-width: 64rem;
+  }
+  /* xl */
+  @media (width >= 1280) {
+    max-width: 80rem;
+  }
+  /* 2xl */
+  @media (width >= 1536px) {
+    max-width: 96rem;
+  }
+}
+
+@utility container {
+  margin: 0 auto;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.js-menu-hamburguer.active {
+  left: 0;
+}
+
+.js-tela.active {
+  display: flex;
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+

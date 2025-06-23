@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Tailwind</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+
+    <!-- Css do Giovanni -->
+     <link rel="stylesheet" href="style-giovanni.css">
+  </head>
+  <body class="bg-branco min-h-screen pb-96">
+    <div class="opacity-0 inset-0 absolute js-tela bg-amber-200 hidden"></div>
+    <header class="bg-primaria-escura p-4">
+      <div class="container flex justify-between relative">
+        <div class="flex gap-1.5 items-center group py-1 hover:bg-gradient-to-r hover:from-primaria-escura hover:to-primaria-clara  rounded-lg px-4 y-2 transition duration-300 ease-linear js-menu-btn group">
+          <button class="flex flex-col gap-[3px] items-center justify-center w-8 h-8 focus:outline-none " tabindex="0">
+            <span class="block w-8 h-[3px] bg-white rounded-full transition-all duration-300 group-focus:rotate-45 group-focus:translate-y-2"></span>
+            <span class="block w-8 h-[3px] bg-white rounded-full transition-all duration-300 group-focus:opacity-0"></span>
+            <span class="block w-8 h-[3px] bg-white rounded-full transition-all duration-300 group-focus:-rotate-45 group-focus:-translate-y-2"></span>
+          </button>
+          <span class="text-white text-xl">Menu</span>
+        </div>
+
+        <div class="js-menu-hamburguer fixed -left-[100%] top-0 w-fit h-full bg-primaria-escura p-4  justify-between transition-all duration-300 grid z-40">
+          <div class="*:flex *:items-center *:gap-1 flex flex-col gap-4 pt-4">
+            <a href="" class="hover:bg-primaria-clara p-2 rounded-lg"><img src="./public/media/news.svg" alt="" class="w-9 -translate-x-0.5"><span class="text-xl text-white">Notícias</span></a>
+            <a href="" class="hover:bg-primaria-clara p-2 rounded-lg"><img src="./public/media/video.svg" alt="" class="w-8"><span class="text-xl text-white">Vídeo</span></a>
+            <a href="" class="hover:bg-primaria-clara p-2 rounded-lg"><img src="./public/media/podcast.svg" alt="" class="w-8"><span class="text-xl text-white">Podcast</span></a>
+            <a href="" class="hover:bg-primaria-clara p-2 rounded-lg"><img src="./public/media/educacao.svg" alt="" class="w-10 -translate-x-1"><span class="text-xl text-white">Educação</span></a>
+            <a href="" class="hover:bg-primaria-clara p-2 rounded-lg"><img src="./public/media/buscar.svg" alt="" class="w-8" ><span class="text-xl text-white">Oportunidades</span></a>
+            <a href="./Paginas/login.html" class="bg-primaria-escura hover:shadow-lg hover:shadow-primaria-clara px-4 transition-all py-2 text-2xl text-white rounded-lg font-bold">Login</a>
+          </div>
+          <div class="*:flex *:items-center *:gap-1 flex flex-col justify-end gap-4  ">
+            <a href="" class="hover:bg-primaria-clara p-2 rounded-lg"><img src="./public/media/help.svg" alt="" class="w-8"><span class="text-xl text-white">Help</span></a>
+            <a href="" class="hover:bg-primaria-clara p-2 rounded-lg"><img src="./public/media/info.svg" alt="" class="w-8"><span class="text-xl text-white">Info</span></a>
+          </div>
+        </div>
+
+        <a href="./" class=""><h1 class="text-4xl text-white font-poppins font-medium"><span class="text-primaria-clara">Tec</span>Scope</h1></a>
+        <div class="flex items-center relative py-2 px-4 group">
+          <label for="search" class="cursor-pointer">
+            <img src="/media/buscar.svg" alt="" class="w-6 "/>
+          </label>
+          <input
+            id="search"
+            type="text"
+            placeholder="Buscar..."
+            class="peer absolute right-0 top-0 w-0 opacity-0 px-0 py-2 rounded transition-all duration-300 bg-white text-black shadow focus:w-40 focus:opacity-100 focus:px-3 focus:outline-none"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="container grid grid-cols-[3fr_2fr] gap-8 mt-8 mb-12">
+      <div class="p-4 pl-16 pt-52 rounded-lg border-[1px] border-secundaria-escura w-full">
+        <a href="./Paginas/page11.html" class="text-6xl font-bold text-primaria-escura mb-8 block max-w-[25ch] hover:text-primaria-clara">
+          Amazon demite 200 funcionários após falência
+        </a>
+        <p class="text-2xl max-w-[35ch] mb-2">Funcionarios estao revoltados, e por conta disso estão fazendo manisfetações</p>
+        <p class="text-2xl max-w-[35ch] ">Funcionarios estao revoltados, e por conta disso estão fazendo manisfetações</p>
+      </div>
+      <div class="grid grid-rows-2 gap-4 w-full">
+        <a href="./Paginas/page12" class="group relative cursor-pointer overflow-hidden rounded-lg">
+          <img src="./public/fotos/jeff-bezos.png" alt="" class="size-full object-cover transition-transform group-hover:scale-110">
+          <span class="text-3xl font-medium left-4 flex flex-wrap absolute top-4 text-white">Movimentações na empresa</span>
+          <img src="./public/media/seta.svg" alt="" class="absolute bottom-4 right-12 w-8 group-hover:translate-x-4 transition-transform ">
+        </a>
+        <a href="./Paginas/page13" class="group relative cursor-pointer overflow-hidden rounded-lg">
+          <img src="./public/fotos/empresa-amazon.png" alt="" class="size-full object-cover transition-transform group-hover:scale-110">
+          <span class="text-3xl font-medium left-4 flex flex-wrap absolute top-4 text-white">Empresário esta em processo jurídico</span>
+          <img src="./public/media/seta.svg" alt="" class="absolute bottom-4 right-12 w-8 group-hover:-rotate-90 transition-transform ">
+        </a>
+      </div>
+    </main>
+    <section class="container flex border border-secundaria-escura rounded-lg overflow-hidden mb-12">
+      <div href="" class="flex">
+        <div>
+          <img src="./public/fotos/netflix.jpg" alt="size-full object-cover">
+        </div>
+        <div class="p-4 items-center">
+          <a href="./Paginas/page14.html" class="text-5xl text-primaria-escura font-bold mb-4 block hover:text-primaria-clara">Netflix anúncia seu contrato amazon prime vídeo</a>
+          <p class="text-2xl ">Funcionarios estao revoltados, e por conta disso estão fazendo manisfetações</p>
+          <p class="text-2xl ">Funcionarios estao revoltados, e por conta disso estão fazendo manisfetações</p>
+        </div>
+      </div>
+    </section>
+    <section class="container grid grid-cols-[4fr_2fr] gap-8 mb-12">
+        <div class="grid grid-cols-3 gap-8 border-[1px] border-secundaria-escura rounded-lg p-4">
+          <div class="col-span-2 flex flex-col justify-end pb-8">
+            <a href="./Paginas/page15.html" class="text-4xl font-bold text-primaria-escura mb-4 hover:text-primaria-clara cursor-pointer">Atualização no React Js possibilita maior interatividade com o usuário</a>
+            <p class="text-2xl mb-2">Funcionarios estao revoltados, e por conta</p>
+            <p class="text-2xl">Funcionarios estao revoltados, e por conta</p>
+          </div>
+          <img src="./public/fotos/react.jpg" alt="">
+        </div>
+        <div class="p-4 border-[1px] border-secundaria-escura rounded-lg">
+          <span class="text-secundaria-escura text-xl">Pesquisa</span>
+          <h1 class="text-3xl text-primaria-escura font-bold mb-4 mt-2">Você já trabalha na area da tecnologia?</h1>
+          <div class="mb-2">
+            <input type="radio" id="sim" class="size-4" name="trabalhaTec">
+            <label for="sim" class="text-2xl">Sim, trabalho na area</label>
+          </div>
+          <div class="mb-2">
+            <input type="radio" id="nao" class="size-4" name="trabalhaTec">
+            <label for="nao" class="text-2xl">Sim, trabalho na area</label>
+          </div>
+          <div class="mb-2">
+            <input type="radio" id="pretendo" class="size-4" name="trabalhaTec">
+            <label for="pretendo" class="text-2xl">Sim, trabalho na area</label>
+          </div>
+        </div>
+    </section>
+
+<!-- codigo do giovanni adaptado -->
+
+    <section class="codigo-giovanni container divide-y-[1px] divide-secundaria-escura">
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem1.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Inovações tecnológicas</span>
+          <a href="./Paginas/page1.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            Estudantes da Universidade de Oxford desenvolvem bateria que dura até dez anos!
+          </a>
+          <p class="text-xl">
+            Segundo os desenvolvedores, a bateria utiliza um eletrodo de óxido metálico altamente estável e um eletrólito sólido não inflamável, o que a torna não apenas mais durável, mas segura e mais eficiente.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem2.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Acessibilidade</span>
+          <a href="./Paginas/page2.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            Novo Aplicativo de Comunicação em Libras ganha sucesso, sendo implementado em escolas públicas
+          </a>
+          <p class="text-xl">
+            Devido ao Novo Ensino Médio, escolas públicas do estado de São Paulo adota este aplicativo para contribuir na qualificação profissional de alunos.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem3.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Evento</span>
+          <a href="./Paginas/page3.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            No dia 23 de Junho de 2025 ocorrerá a 4º Feira de Empreendedorismo e Tecnologia no estado de São Paulo
+          </a>
+          <p class="text-xl">
+            O evento abordará questões referentes ao desenvolvimento da I.A e como manejar essa nova ferramenta no mercado.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem4.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Curiosidades</span>
+          <a href="./Paginas/page4.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            A origem do símbolo “@” no e-mail: de contabilidade medieval à revolução digital
+          </a>
+          <p class="text-xl">
+            Você já parou para pensar por que usamos o símbolo “@” nos endereços de e-mail? Esse símbolo, que parece tão moderno, na verdade tem uma origem bem antiga — e surpreendente.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem5.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Previsões e Perspectivas</span>
+          <a href="./Paginas/page5.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            O Futuro Chegou: Previsões para a Evolução da Tecnologia até 2035
+          </a>
+          <p class="text-xl">
+            A tecnologia tem avançado em uma velocidade impressionante. Mas o que podemos esperar dos próximos 10 anos? Veja a seguir algumas das previsões mais comentadas sobre a evolução tecnológica até 2035.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem6.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Economia Global</span>
+          <a href="./Paginas/page6.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            Dados Demonstram a Evolução da Economia no ramo da Inovação Tecnológica
+          </a>
+          <p class="text-xl">
+            Iremos explorar a economia na indústria tecnológica, destacando seus impactos, desafios econômicos e oportunidades de crescimento, derivadas do seu crescimento no meio digital.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem7.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Inovadores</span>
+          <a href="./Paginas/page7.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            Os Titãs da Tecnologia: Quem São os Principais Nomes que Moldam o Futuro Digital?
+          </a>
+          <p class="text-xl">
+            No cenário tecnológico global, alguns nomes se destacam não apenas por suas inovações, mas pela influência que exercem sobre a sociedade como um todo.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem8.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Entretenimento Digital</span>
+          <a href="./Paginas/page8.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            Streaming Interativo com Inteligência Artificial Revoluciona o Entretenimento Digital
+          </a>
+          <p class="text-xl">
+            A plataforma global de streaming StreamIQ lançou esta semana o primeiro seriado interativo gerado por inteligência artificial.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem9.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Mobilidade</span>
+          <a href="./Paginas/page9.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            Cidades Inteligentes: Veja como a Inovação está Redefinindo o Transporte Urbano
+          </a>
+          <p class="text-xl">
+            Com o avanço acelerado da tecnologia, a mobilidade urbana passou por uma verdadeira revolução nos últimos anos
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 py-12">
+        <img src="./imagens/imagem10.jpg" alt="" class="w-[350px] rounded-lg">
+        <div>
+          <span class="text-xl text-secundaria-escura">Ciência e Saúde</span>
+          <a href="./Paginas/page10.html" class="text-3xl mb-3 font-bold text-primaria-escura hover:text-primaria-clara flex flex-wrap">
+            Nanotecnologia Avança e Abre Caminho para Tratamentos Médicos Personalizados
+          </a>
+          <p class="text-xl">
+            Pesquisadores do Instituto Internacional de Nanociência (IIN) anunciaram nesta semana um avanço inédito na aplicação de nanotecnologia para tratamentos médicos personalizados.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Do Giovanni -->
+        
+    <!-- <div id="1" class="display">
+    <img src="./Imagens/img1.jpg">
+    <div class="tema">
+    Inovações tecnológicas
+    <a href="../Pasta_Protótipo-PW/Paginas/page1.html"><div class="titulo"><span class="mouse">
+    Estudantes da Universidade de Oxford desenvolvem bateria que dura até dez anos!
+    </span></a>
+    <div class="subtitulo">
+    Segundo os desenvolvedores, a bateria utiliza um eletrodo de óxido metálico altamente estável e um eletrólito sólido não inflamável, o que a torna não apenas mais durável, mas segura e mais eficiente.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    
+    <div id="2" class="display">
+    <img src="./Imagens/img2.jpg">
+    <div class="tema">
+    Acessibilidade
+    <a href="../Pasta_Protótipo-PW/Paginas/page2.html"><div class="titulo"><span class="mouse">
+    Novo Aplicativo de Comunicação em Libras ganha sucesso, sendo implementado em escolas públicas
+    </span></a>
+    <div class="subtitulo">
+    Devido ao Novo Ensino Médio, escolas públicas do estado de São Paulo adota este aplicativo para contribuir na qualificação profissional de alunos.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+
+    <div id="3" class="display">
+    <img src="./Imagens/img3.jpg">
+    <div class="tema">
+    Evento
+    <a href="../Pasta_Protótipo-PW/Paginas/page3.html"><div class="titulo"><span class="mouse">
+    No dia 23 de Junho de 2025 ocorrerá a 4º Feira de Empreendedorismo e Tecnologia no estado de São Paulo
+    </span></a>
+    <div class="subtitulo">
+    O evento abordará questões referentes ao desenvolvimento da I.A e como manejar essa nova ferramenta no mercado.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    
+    <div id="4" class="display">
+    <img src="./Imagens/img4.jpg">
+    <div class="tema">
+    Curiosidades
+    <a href="../Pasta_Protótipo-PW/Paginas/page4.html"><div class="titulo"><span class="mouse">
+    A origem do símbolo “@” no e-mail: de contabilidade medieval à revolução digital
+    </span></a>
+    <div class="subtitulo">
+    Você já parou para pensar por que usamos o símbolo “@” nos endereços de e-mail? Esse símbolo, que parece tão moderno, na verdade tem uma origem bem antiga — e surpreendente.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+
+    <div id="5" class="display">
+    <img src="./Imagens/img5.jpg">
+    <div class="tema">
+    Previsões e Perspectivas
+    <a href="../Pasta_Protótipo-PW/Paginas/page5.html"><div class="titulo"><span class="mouse">
+    O Futuro Chegou: Previsões para a Evolução da Tecnologia até 2035
+    </span></a>
+    <div class="subtitulo">
+    A tecnologia tem avançado em uma velocidade impressionante. Mas o que podemos esperar dos próximos 10 anos? Veja a seguir algumas das previsões mais comentadas sobre a evolução tecnológica até 2035.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+   
+
+    <br><br>
+  <center><div>Principais Destaques do Mês:</div></center>
+  <div class="carousel-container">
+    <a href="#1"><img class="carousel-image" src="./Imagens/imagem1.jpg" alt="Imagem 1" style="display:block"></a>
+    <a href="#2"><img class="carousel-image" src="./Imagens/imagem2.jpg" alt="Imagem 2"></a>
+    <a href="#3"><img class="carousel-image" src="./Imagens/imagem3.jpg" alt="Imagem 3"></a>
+    <a href="#4"><img class="carousel-image" src="./Imagens/imagem4.jpg" alt="Imagem 4"></a>
+    <a href="#5"><img class="carousel-image" src="./Imagens/imagem5.jpg" alt="Imagem 5"></a>
+    <a href="#6"><img class="carousel-image" src="./Imagens/imagem6.jpg" alt="Imagem 6"></a>
+    <a href="#7"><img class="carousel-image" src="./Imagens/imagem7.jpg" alt="Imagem 7"></a>
+    <a href="#8"><img class="carousel-image" src="./Imagens/imagem8.jpg" alt="Imagem 8"></a>
+    <a href="#9"><img class="carousel-image" src="./Imagens/imagem9.jpg" alt="Imagem 9"></a>
+    <a href="#10"><img class="carousel-image" src="./Imagens/imagem10.jpg" alt="Imagem 10"></a>
+
+    <div class="arrow left-arrow" onclick="changeImage(-1)">&#10094;</div>
+    <div class="arrow right-arrow" onclick="changeImage(1)">&#10095;</div>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const images = document.getElementsByClassName("carousel-image");
+
+    function changeImage(direction) {
+      images[currentIndex].style.display = "none";
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      images[currentIndex].style.display = "block";
+    }
+  </script>
+  <br><br>
+  <br><br>
+  <hr>
+  <br><br>
+  
+
+    <div id="6" class="display">
+    <img src="./Imagens/imagem6.jpg">
+    <div class="tema">
+    Economia Global
+    <a href="../Pasta_Protótipo-PW/Paginas/page6.html"><div class="titulo"><span class="mouse">
+    Dados Demonstram a Evolução da Economia no ramo da Inovação Tecnológica
+    </span></a>
+    <div class="subtitulo">
+    Iremos explorar a economia na indústria tecnológica, destacando seus impactos, desafios econômicos e oportunidades de crescimento, derivadas do seu crescimento no meio digital.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+
+    <div id="7" class="display">
+    <img src="./Imagens/img7.jpg">
+    <div class="tema">
+    Inovadores
+    <a href="../Pasta_Protótipo-PW/Paginas/page7.html"><div class="titulo"><span class="mouse">
+    Os Titãs da Tecnologia: Quem São os Principais Nomes que Moldam o Futuro Digital?
+    </span></a>
+    <div class="subtitulo">
+    No cenário tecnológico global, alguns nomes se destacam não apenas por suas inovações, mas pela influência que exercem sobre a sociedade como um todo.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+
+    <div id="8" class="display">
+    <img src="./Imagens/imagem8.jpg">
+    <div class="tema">
+    Entretenimento Digital
+    <a href="../Pasta_Protótipo-PW/Paginas/page8.html"><div class="titulo"><span class="mouse">
+    Streaming Interativo com Inteligência Artificial Revoluciona o Entretenimento Digital
+    </span></a>
+    <div class="subtitulo">
+    A plataforma global de streaming StreamIQ lançou esta semana o primeiro seriado interativo gerado por inteligência artificial.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+
+    <div id="9" class="display">
+    <img src="./Imagens/img9.jpg">
+    <div class="tema">
+    Mobilidade
+    <a href="../Pasta_Protótipo-PW/Paginas/page9.html"><div class="titulo"><span class="mouse">
+    Cidades Inteligentes: Veja como a Inovação está Redefinindo o Transporte Urbano
+    </span></a>
+    <div class="subtitulo">
+    Com o avanço acelerado da tecnologia, a mobilidade urbana passou por uma verdadeira revolução nos últimos anos
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+
+    <div id="10" class="display">
+    <img src="./Imagens/img10.jpg">
+    <div class="tema">
+    Ciência e Saúde
+    <a href="../Pasta_Protótipo-PW/Paginas/page10.html"><div class="titulo"><span class="mouse">
+    Nanotecnologia Avança e Abre Caminho para Tratamentos Médicos Personalizados
+    </span></a>
+    <div class="subtitulo">
+    Pesquisadores do Instituto Internacional de Nanociência (IIN) anunciaram nesta semana um avanço inédito na aplicação de nanotecnologia para tratamentos médicos personalizados.
+    </div>
+    </div>
+    </div>
+    </div>
+    <br><br>
+    <hr>
+    <br><br> -->
+
+    <script src="./src/main.js"></script>
+  </body>
+</html>
